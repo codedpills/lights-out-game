@@ -76,10 +76,13 @@ class Board extends Component {
       }
     }
 
-    // flip initial cell
-    flipCell(x, y);
-
+    
     // TODO: flip this cell and the cells around it
+    flipCell(x, y); // flip initial cell
+    flipCell(x, y-1); // flip left
+    flipCell(x, y+1); // flip right
+    flipCell(y-1, x); // flip below
+    flipCell(y+1, x); // flip above
 
     // win when every cell is turned off
     // TODO: determine is the game has been won
